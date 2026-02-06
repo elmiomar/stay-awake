@@ -28,10 +28,11 @@ The app is installed to `~/Applications/`.
 ## Other Commands
 
 ```bash
-make build     # Compile the app into build/
-make run       # Build and launch
-make uninstall # Remove from ~/Applications
-make clean     # Delete build directory
+make build      # Compile the app into build/
+make run        # Build and launch
+make autostart  # Install and start on login
+make uninstall  # Remove from ~/Applications
+make clean      # Delete build directory
 ```
 
 ## How It Works

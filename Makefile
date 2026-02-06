@@ -3,7 +3,7 @@ BUILD_DIR = build
 APP_BUNDLE = $(BUILD_DIR)/$(APP_NAME).app
 INSTALL_DIR = $(HOME)/Applications
 
-.PHONY: build install uninstall run clean
+.PHONY: build install uninstall run clean autostart
 
 build:
 	@command -v caffeinate >/dev/null 2>&1 || { echo "Error: 'caffeinate' not found on this system. StayAwake requires caffeinate (built into macOS) and cannot be installed without it."; exit 1; }
@@ -26,6 +26,10 @@ uninstall:
 
 run: build
 	@open $(APP_BUNDLE)
+
+autostart: install
+	@osascript -e 'tell application "System Events" to make login item at end with properties {path:"$(INSTALL_DIR)/$(APP_NAME).app", hidden:false}'
+	@echo "$(APP_NAME) will now start automatically on login"
 
 clean:
 	@rm -rf $(BUILD_DIR)
