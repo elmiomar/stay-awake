@@ -51,3 +51,5 @@ StayAwake is a single-file Swift app that:
 3. Kills `caffeinate` when you quit
 
 No background daemons, no login items. Just open and close.
+
+This is just a GUI wrapper around `caffeinate`, a utility that ships with every Mac. Nothing fishy, nothing risky. Read the source, it's one file.
