@@ -4,6 +4,14 @@ A lightweight macOS menu bar app that prevents your Mac from sleeping.
 
 When running, a **moon icon** appears in your menu bar. Click it to quit and let your Mac sleep again.
 
+## Why?
+
+I found myself typing my password dozens of times a day. Kick off a build, start reading docs, screen goes black. Tail a deployment log, look away for a minute, screen goes black. Go make coffee, come back, screen goes black. Every time, unlock, find where I was, lose my train of thought.
+
+And no, you can't always just change the display settings. Corporate machines, managed profiles, you know the drill.
+
+This is the laziest and most satisfying fix I've ever built.
+
 ## Prerequisites
 
 - macOS 13 (Ventura) or later
